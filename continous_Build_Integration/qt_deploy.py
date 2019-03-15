@@ -4,6 +4,7 @@ from shutil import rmtree
 import subprocess
 from time import sleep
 
+# Setting the config python parser
 config = configparser.ConfigParser()
 if not (os.path.isfile('config.ini')):
     print('No config file found!...quit')
@@ -12,6 +13,8 @@ config.read('config.ini')
 print("Config file read successfully...")
 sleep(0.5)  # Time in seconds.
 
+# Setting up folders. Removing manually when permission denied by Windows.
+# This solution is used a few times to overcome windows deleting errors.
 if os.path.isdir(config['PATHS']['qtDeployDir']):
     try:
         rmtree(config['PATHS']['qtDeployDir'])
@@ -23,9 +26,8 @@ if os.path.isdir(config['PATHS']['qtDeployDir']):
             print(e.output)
             quit()
 
-# Debug
+# Debug. Setting up folders and executing windeployqt
 os.makedirs(config['PATHS']['qtDeployDebugDir'])
-
 try:
     print("Executing windeployqt debug command...")
     sleep(0.5)  # Time in seconds.
@@ -48,9 +50,8 @@ except subprocess.CalledProcessError as e:
     print(e.output)
     quit()
 
-# Release
+# Release. Setting up folders and executing windeployqt
 os.makedirs(config['PATHS']['qtDeployReleaseDir'])
-# os.mkdir(config['PATHS']['qtDeployReleaseDir'])
 try:
     print("Executing windeployqt release command...")
     sleep(0.5)  # Time in seconds.

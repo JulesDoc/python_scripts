@@ -4,6 +4,7 @@ import subprocess
 from shutil import rmtree, copytree
 from time import sleep
 
+# Setting up the config python parser
 config = configparser.ConfigParser()
 if not (os.path.isfile('config.ini')):
     print("No config file found!...quit")
@@ -12,6 +13,7 @@ config.read('config.ini')
 print("Config file read successfully...")
 sleep(0.5)  # Time in seconds.
 
+# Checking terraSys path from config.ini
 if not os.path.isdir(config['PATHS']['terraSysDir']):
     print('Check config.ini: terraSysDir!...quit')
     exit()
@@ -19,6 +21,7 @@ if not os.path.isdir(config['PATHS']['terraSysDir']):
 print("Copying headers to M drive...")
 sleep(0.5)  # Time in seconds.
 
+# Setting up source and destination and copying headers
 for dir_name in os.listdir(config['PATHS']['terraSysDir']):
     if os.path.isdir(config['PATHS']['terraSysDir'] + '\\' + dir_name + '\\' + 'include'):
         source = config['PATHS']['terraSysDir'] + '\\' + dir_name + '\\' + 'include'
