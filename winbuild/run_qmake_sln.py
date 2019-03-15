@@ -3,6 +3,7 @@ import os
 import configparser
 from time import sleep
 
+# Setting the config python parser
 config = configparser.ConfigParser()
 if not (os.path.isfile('config.ini')):
     print('')
@@ -11,6 +12,9 @@ if not (os.path.isfile('config.ini')):
 config.read('config.ini')
 print("Config file read successfully...")
 sleep(0.5)  # Time in seconds.
+
+# Executing qmake
+# System calls are done by means of subprocess module
 try:
     print("Starting qmake build...")
     sleep(0.5)  # Time in seconds.
