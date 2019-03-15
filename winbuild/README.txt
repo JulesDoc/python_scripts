@@ -2,7 +2,63 @@
 
 These files are called to substitute batch files used to deploy TerRaSys source code on developer machine.
 And also are meant to be used to facilitate the integration of the developer code into production.
-Python scripts implements the same functionality as batch files but using 3.7 Python programming language. 
+Python scripts implements the same functionality as batch files but using 3.7 Python programming language.
+
+# System requirements
+
+    1. Install visual studio (Including C++ compiler).
+    2. Install Qt. Make sure to have the binaries corresponding to the installed version of visual studio.
+        b. Open the file $QT_PATH$\mkspecs\common\msvc-version.conf
+        c. Remove all the strings equal to '-Zc:strictStrings'
+
+
+# Deploy TerRaSys source code on a developer machine
+
+    1. Create a folder in your local machine for the source code. Example: C:\TerRaSysOnTFS
+        Note: in this document TERRASYS_DIR refers to the folder where TerRaSys source code is located
+    2. Get the latest version from TFS of the files:
+        a. TerRaSysOnTFS/dependencies.pro
+        b. TerRaSysOnTFS/terrasys.pri
+        c. TerRaSysOnTFS/terrasys.pro
+        Note: These files contain the configuration existing in the build machine.
+    3. Get the latest version of the projects you need to work on. Example: TerRaTronLib
+
+    At this stage you will have the following files hierarchy:
+
+        C:\TerRaSysOnTFS\dependencies.pro
+        C:\TerRaSysOnTFS\terrasys.pri
+        C:\TerRaSysOnTFS\terrasys.pro
+        C:\TerRaSysOnTFS\TerRaTronLib\* (Here are the code source of the project TerRaTronLib)
+
+    4. Edit the file terrasys.pro and change the content as follow (If you are taking only TerRaTronLib):
+        Old content:
+            SUBDIRS = \
+                $$TERRASYS_LIBS \
+                $$TERRASYS_PROJECTS
+
+        New content:
+            SUBDIRS = \
+                TerRaTronLib
+
+        Note: Do not check-in the file terrasys.pro
+
+# Deploy visual studio projects:
+
+    1. Create a folder in your local machine for the projects. Example: C:\TerRaSysBuild
+        Note: in this document TERRASYS_BUILD refers to the folder where TerRaSys projects are located
+    2. Get the latest version from TFS of the folder TerRaSysBuild/winbuild
+
+     At this stage you will have the following files hierarchy:
+
+        C:\TerRaSysBuild\winbuild\settingSystemVars.bat
+        C:\TerRaSysBuild\winbuild\run_qmake_sln.py
+        C:\TerRaSysBuild\winbuild\run_qmake_proj.py
+        C:\TerRaSysBuild\winbuild\config.ini
+
+
+    3. Edit the file settingSystemVars.bat to QMAKESPEC and PATH. That is all. Save. The rest of the configuration is
+    within the config.ini file.
+
 
 
 # How to use them
@@ -12,29 +68,53 @@ configuration language which provides a structure similar to what’s found in M
 Python Configuration file Parser.
 
 First thing to do is to execute "settingSystemVars.bat" to set the PATH and QMAKESPEC system variables. This is the only
-one batch file remaining because setting an environment variable through a system calls inside a Python script sets it only for
-the current process and any child processes it launches, thus, the best solution is to keep this .bat file.
+one batch file remaining because setting an environment variable through a system calls inside a Python script sets it
+only for the current process and any child processes it launches, thus, the best solution is to keep this .bat file.
 
 Second, as mentioned before, the user needs to configure all necessary variables in the config.ini file.
 There is no need to modify any python source code. Python scripts will read and parse the info written in the
 config.ini file. To comment a line use '#' + space.
 
+Within the config.ini file, the user can choose between DEBUG or RELEASE build and can also ask to copy libraries and
+headers to M drive after the build, those variables are in the DEFAULT part of the file. Config.ini file is very easy to
+manage and it does not need more explanations.
+
 DEPLOY SOURCE CODE INTO DEVL MACHINE: Depending on the necessities of the user:
 
-	- run_qmake_sln: To create terrasys.sln with all projects specified in terrasys.pro.
+	- run_qmake_sln.py: To create terrasys.sln with all projects specified in terrasys.pro.
 	
-	- run_qmake_proj: To add a new project passed as parameter.
+	- run_qmake_proj.py: To add a new project passed as parameter.
 
 BUILD AND INTEGRATE DEVL CODE INTO PRODUCTION:
 
+    Following scripts are locate within continuous_build_integration folder. Download them. They can be launched from
+    any location in the system, config.ini file will take care of the path consistency.
+
     - copy_3rd_party.py: The 3rd party tools should be located in the folder c:\terrasys_3rdparty in the build machine.
-    This 3rd party libraries are used to properly create and execute the projects.
+    3rd party libraries are used to properly create and execute the projects. This scripts copies every lib or dll
+    file into lib_release || lib_debug of the TerRaSysBuild.
+    Some of the 3rd_party libs must be configure by the developer: OSGeo4W and prop_mdl_dll_idwm.*. They should be
+    present in c:\terrasys_3rd_party when the user execute this script.
+    This script can be executed in standalone way or can automatically called through quick_build.py when working in
+    DEBUG or RELEASE mode.
 
-    - copy_headers_to_m_drive.py:
+    - copy_headers_to_m_drive.py: When a proper build has been executed, this script copies header files into the M
+    drive. This script can be executed in standalone way or can automatically be called through quick_build.py when
+    working in DEBUG mode.
 
-    - copy_libs_to_m_drive.py:
+    - copy_libs_to_m_drive.py: When a proper build has been executed, this script copies libraries into the M drive.
+    This script can be executed in standalone way or can automatically called through quick_build.py when working in
+    DEBUG or RELEASE mode.
 
-    - qt_deploy.py
+    - qt_deploy.py: Used mainly to execute windeployqt command to generate and include all the libraries associated with
+    a given Qt project to be able to run independently.
+
+    - quick_build.py. Calling this script means mainly build the whole system. It will first copy 3rd party libraries
+    and then, it will call DEVENV command to build all VS projects involved. Then, if the build finishes succesfully,
+    it will copy libs and headers into M folder. It will also send a mail to the user. In case of successful buidling,
+    the mail will be empty warning that everything went well, in case the build fails, mail will display the name of
+    the projects that failed and it will send also, as attached file (outfile.txt), all the output resulting from the
+    build, in order to check more precisely where the errors come from.
 
 
 
@@ -51,7 +131,7 @@ BUILD AND INTEGRATE DEVL CODE INTO PRODUCTION:
 # Recurrent solutions used over the code
 
     - subprocess module. Used to launch/execute commands for setting up the folders, copy, delete, etc...
-                         Used to execute commands related with the build: devenv, windeploy.
+                         Used to execute commands related with the build: devenv, windeployqt.
 
     - Manually deleting folders using system cmd calls like rd. This due to permission errors on Windows.
 
