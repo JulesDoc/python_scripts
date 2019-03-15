@@ -55,7 +55,7 @@ def get_error_lines():
 def send_mail(error):
 
     gmail_user = 'terrabld.tas@gmail.com'
-    gmail_app_password = 'terrabldtas'
+    gmail_app_password = '*********'
     sent_from = gmail_user
     sent_to = ['julio.calvo@itu.int']
     if error:
