@@ -61,7 +61,7 @@ Python scripts implements the same functionality as batch files but using 3.7 Py
 
 
 
-# How to use them
+# How to use the scripts
 
 Every variable used along these scripts must be defined through the config.ini file. This file implements a basic
 configuration language which provides a structure similar to what’s found in Microsoft Windows INI files by means of the
@@ -79,13 +79,18 @@ Within the config.ini file, the user can choose between DEBUG or RELEASE build a
 headers to M drive after the build, those variables are in the DEFAULT part of the file. Config.ini file is very easy to
 manage and it does not need more explanations.
 
-DEPLOY SOURCE CODE INTO DEVL MACHINE: Depending on the necessities of the user:
+****IMPORTANT: Password must be written in the config.ini file to be used ONLY LOCALLY. NEVER CHECK-IN config.file
+
+NOTE on config.ini: There are two files config.ini, one in WINBUILD, one in CONTINUOUS_BUILD_INTEGRATION. Both must be
+configured depending on functionality chosen.
+
+- DEPLOY SOURCE CODE INTO DEVL MACHINE: Depending on the necessities of the user:
 
 	- run_qmake_sln.py: To create terrasys.sln with all projects specified in terrasys.pro.
 	
 	- run_qmake_proj.py: To add a new project passed as parameter.
 
-BUILD AND INTEGRATE DEVL CODE INTO PRODUCTION:
+- BUILD AND INTEGRATE DEVL CODE INTO PRODUCTION:
 
     Following scripts are locate within continuous_build_integration folder. Download them. They can be launched from
     any location in the system, config.ini file will take care of the path consistency.
@@ -139,9 +144,10 @@ BUILD AND INTEGRATE DEVL CODE INTO PRODUCTION:
 # Tools settings used for this project
 
 	PyCharm 2018.3.5 (Professional Edition)
-	Build #PY-183.5912.18, built on February 26, 2019
-	Licensed to PyCharm Evaluator
-	Expiration date: March 17, 2019
-	JRE: 1.8.0_152-release-1343-b28 amd64
-	JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
-	Windows 10 10.0
+    Build #PY-183.5912.18, built on February 26, 2019
+    Licensed to Julio Calvo
+    Subscription is active until January 17, 2020
+    For educational use only.
+    JRE: 1.8.0_152-release-1343-b28 x86
+    JVM: OpenJDK Server VM by JetBrains s.r.o
+    Windows 10 10.0

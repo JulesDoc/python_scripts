@@ -1,5 +1,6 @@
 import smtplib
 import os
+import configparser
 from shutil import copy
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -8,6 +9,11 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 COMMASPACE = ', '
+
+
+# Setting the config python parser
+config = configparser.ConfigParser()
+config.read('config.ini')
 
 
 # This function is used in cases where there is an existing folder that
@@ -55,9 +61,12 @@ def get_error_lines():
 def send_mail(error):
 
     gmail_user = 'terrabld.tas@gmail.com'
-    gmail_app_password = '*********'
+
+    # PASSWORD MUST BE KNOWN BY THE USER AND SET IN CONFIG.INI
+    gmail_app_password = config['DEFAULTS']['passwordMailAddress']
+
     sent_from = gmail_user
-    sent_to = ['julio.calvo@itu.int']
+    sent_to = [config['DEFAULTS']['mailAddressBuildResults']]
     if error:
         sent_subject = "Error"
     else:

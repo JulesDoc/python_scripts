@@ -1,6 +1,5 @@
 import subprocess
 import os
-from shutil import rmtree
 import configparser
 import utils_module
 from time import sleep
@@ -25,17 +24,6 @@ except subprocess.CalledProcessError as e:
 # System calls are done by means of subprocess module
 try:
     if config['DEFAULT']['debugOrRelease'] == 'debug':
-        if os.path.isdir(config['PATHS']['libDebugDir']):
-            try:
-                rmtree(config['PATHS']['libDebugDir'])
-            except IOError:
-                print("Problem removing folder. Removing manually")
-                try:
-                    subprocess.run('rd /S /Q ' + config['PATHS']['libDebugDir'], shell=True, check=True)
-                except subprocess.CalledProcessError as e:
-                    print(e.output)
-                    quit()
-        os.mkdir(config['PATHS']['libDebugDir'])
         print("Executing devenv command, this operation will take a few minutes...")
         sleep(0.5)  # Time in seconds.
         debug = '"debug"'
@@ -47,17 +35,6 @@ try:
             subprocess.run('python copy_libs_to_m_drive.py', shell=True, check=True)
 
     elif config['DEFAULT']['debugOrRelease'] == 'release':
-        if os.path.isdir(config['PATHS']['libReleaseDir']):
-            try:
-                rmtree(config['PATHS']['libReleaseDir'])
-            except IOError:
-                print("Problem removing folder. Removing manually")
-                try:
-                    subprocess.run('rd /S /Q ' + config['PATHS']['libReleaseDir'], shell=True, check=True)
-                except subprocess.CalledProcessError as e:
-                    print(e.output)
-                    quit()
-        os.mkdir(config['PATHS']['libReleaseDir'])
         print("Executing devenv command, this operation will take a few minutes...")
         sleep(0.5)  # Time in seconds.
         release = '"release"'

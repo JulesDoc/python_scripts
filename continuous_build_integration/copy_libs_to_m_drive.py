@@ -23,8 +23,8 @@ sleep(0.5)  # Time in seconds.
 
 # Setting up source and destination. Debug || Release
 if config['DEFAULT']['debugOrRelease'] == 'debug':
-    destination = config['PATHS']['mDriveFolder'] + '\\' + 'lib_debug'  # config['PATHS']['libDebugDir']
-    source = config['PATHS']['terraSysBuildDir'] + '\\' + 'lib_debug'  # config['PATHS']['libDebugDir']
+    destination = config['PATHS']['mDriveFolder'] + '\\' + 'lib'  # config['PATHS']['libDebugDir']
+    source = config['PATHS']['terraSysBuildDir'] + '\\' + 'lib'  # config['PATHS']['libDebugDir']
 elif config['DEFAULT']['debugOrRelease'] == 'release':
     destination = config['PATHS']['mDriveFolder'] + '\\' + 'lib_release'  # config['PATHS']['libReleaseDir']
     source = config['PATHS']['terraSysBuildDir'] + '\\' + 'lib_release'  # config['PATHS']['libReleaseDir']

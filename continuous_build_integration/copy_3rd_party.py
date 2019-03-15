@@ -37,7 +37,7 @@ for file in lista_files:
     else:
         print("Check config file: idwmFilesPath")
 
-# Second part. Copying from 3rd party folder files to lib_debug / lib_release
+# Second part. Copying from 3rd party folder files to lib / lib_release
 # Setting up source and destination for copying .dll and .libs in Debug
 if config['DEFAULT']['debugOrRelease'] == 'debug':
 
