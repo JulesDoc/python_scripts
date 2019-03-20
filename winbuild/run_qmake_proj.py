@@ -32,8 +32,8 @@ if os.path.isfile(proFileName):
     try:
         print("Starting qmake build...")
         sleep(0.5)  # Time in seconds.
-        subprocess.run('qmake -tp vc -r -o ' + config['PATHS']['terraSysBuildDir'] + + '\\' + sys.argv[1] +
-                       ' ' + proFileName, shell=True, check=True)
+        subprocess.run('qmake -tp vc -r -o ' + config['PATHS']['terraSysBuildDir'] + '\\' + sys.argv[1] + ' ' +
+                       proFileName, shell=True, check=True)
     except subprocess.CalledProcessError as e:
         print(e.output)
         quit()
