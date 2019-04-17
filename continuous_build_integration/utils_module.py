@@ -95,7 +95,7 @@ def send_mail(error):
 
 def attached(error, lista_folders):
     sender = 'terrabld.tas@gmail.com'
-    gmail_password = 'terrabldtas'
+    gmail_password = [config['DEFAULTS']['mailAddressBuildResults']]
     recipients = ['julio.calvo@itu.int']
 
     # Create the enclosing (outer) message
