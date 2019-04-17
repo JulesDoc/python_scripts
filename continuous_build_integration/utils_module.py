@@ -64,7 +64,6 @@ def send_mail(error):
 
     # PASSWORD MUST BE KNOWN BY THE USER AND SET IN CONFIG.INI
     gmail_app_password = config['DEFAULTS']['passwordMailAddress']
-
     sent_from = gmail_user
     sent_to = [config['DEFAULTS']['mailAddressBuildResults']]
     if error:
@@ -95,8 +94,9 @@ def send_mail(error):
 
 def attached(error, lista_folders):
     sender = 'terrabld.tas@gmail.com'
-    gmail_password = [config['DEFAULTS']['mailAddressBuildResults']]
-    recipients = ['julio.calvo@itu.int']
+    # PASSWORD MUST BE KNOWN BY THE USER AND SET IN CONFIG.INI
+    gmail_password = config['DEFAULTS']['passwordMailAddress']
+    recipients = [config['DEFAULTS']['mailAddressBuildResults']]
 
     # Create the enclosing (outer) message
     outer = MIMEMultipart()
