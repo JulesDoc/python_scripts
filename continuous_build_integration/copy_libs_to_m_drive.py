@@ -2,6 +2,7 @@ import os
 import configparser
 import subprocess
 from shutil import rmtree, copytree
+from utils_module import recursive_overwrite
 from time import sleep
 
 # Setting up the config python parser
@@ -32,18 +33,19 @@ else:
     print('Wrong parameters in config.ini...quit')
 
 # and copying libs
-if os.path.isdir(destination):
-    try:
-        rmtree(destination)
-    except IOError:
-        print("Problem removing include folder. Removing header folder manually")
-    try:
-        subprocess.run('rd /S /Q ' + destination, shell=True, check=True)
-    except subprocess.CalledProcessError as e:
-        print(e.output)
-        quit()
+# if os.path.isdir(destination):
+    # try:
+    #    rmtree(destination)
+    # except IOError:
+    #    print("Problem removing include folder. Removing header folder manually")
+    # try:
+    #    subprocess.run('rd /S /Q ' + destination, shell=True, check=True)
+    # except subprocess.CalledProcessError as e:
+    #    print(e.output)
+    #    quit()
 try:
-    copytree(source, destination)
+    recursive_overwrite(source, destination)
+    # copytree(source, destination)
 except IOError:
     print("Something went wrong. Check config.ini. Read README.txt")
     quit()
