@@ -27,8 +27,23 @@ if os.path.isfile(proFileName):
     print("Setting up system...")
     sleep(0.5)  # Time in seconds.
     if os.path.isdir(config['PATHS']['terraSysBuildDir'] + '\\' + sys.argv[1]):
-        rmtree(config['PATHS']['terraSysBuildDir'] + '\\' + sys.argv[1])
-    os.mkdir(config['PATHS']['terraSysBuildDir'] + '\\' + sys.argv[1])
+        destination = config['PATHS']['terraSysBuildDir'] + '\\' + sys.argv[1]
+        try:
+            rmtree(destination)
+        except IOError:
+            print("Problem removing folder. Removing folder manually")
+            try:
+                subprocess.run('rd /S /Q ' + destination, shell=True, check=True)
+            except subprocess.CalledProcessError as e:
+                print(e.output)
+                quit()
+        try:
+            os.mkdir(destination)
+        except subprocess.CalledProcessError as e:
+            print("Creating folder manually")
+            subprocess.run('mkdir ' + destination, shell=True, check=True)
+            print(e.output)
+            quit()
     try:
         print("Starting qmake build...")
         sleep(0.5)  # Time in seconds.
