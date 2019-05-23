@@ -84,11 +84,14 @@ manage and it does not need more explanations.
 NOTE on config.ini: There are two files config.ini, one in WINBUILD, one in CONTINUOUS_BUILD_INTEGRATION. Both must be
 configured depending on functionality chosen.
 
+***DO NOT COMMIT INI FILES***
+
 - DEPLOY SOURCE CODE INTO DEVL MACHINE: Depending on the necessities of the user:
 
-	- run_qmake_sln.py: To create terrasys.sln with all projects specified in terrasys.pro.
+	- run_qmake_sln.py: To create or recreate terrasys.sln with all projects specified in terrasys.pro.
 	
-	- run_qmake_proj.py: To add a new project passed as parameter.
+	- run_qmake_proj.py: To add a project to the terrasys solution or modify a project passed as parameter. If the goal
+	is to modify the project, it is better to close it. Otherwise, Windows will complain of the external use of the file.
 
 - BUILD AND INTEGRATE DEVL CODE INTO PRODUCTION:
 
