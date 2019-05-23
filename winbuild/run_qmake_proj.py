@@ -54,6 +54,7 @@ if os.path.isfile(proFileName):
         quit()
 else:
     print("No .pro file found")
+    quit()
 print("qmake build executed SUCCESSFULLY on " + sys.argv[1] + ' project')
 
 
