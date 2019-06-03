@@ -41,9 +41,11 @@ if os.path.isfile(proFileName):
             os.mkdir(destination)
         except subprocess.CalledProcessError as e:
             print("Creating folder manually")
-            subprocess.run('mkdir ' + destination, shell=True, check=True)
-            print(e.output)
-            quit()
+            try:
+                subprocess.run('mkdir ' + destination, shell=True, check=True)
+            except subprocess.CalledProcessError as e:
+                print(e.output)
+                quit()
     try:
         print("Starting qmake build...")
         sleep(0.5)  # Time in seconds.
