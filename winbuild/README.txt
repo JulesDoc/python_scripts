@@ -42,23 +42,32 @@ Python scripts implements the same functionality as batch files but using 3.7 Py
 
         Note: Do not check-in the file terrasys.pro
 
-# Deploy visual studio projects:
+# Getting python scripts:
 
     1. Create a folder in your local machine for the projects. Example: C:\TerRaSysBuild
         Note: in this document TERRASYS_BUILD refers to the folder where TerRaSys projects are located
-    2. Get the latest version from TFS of the folder TerRaSysBuild/winbuild
 
-     At this stage you will have the following files hierarchy:
+    2. Get the latest version of the scripts from TFS or from GitHub:
 
-        C:\TerRaSysBuild\winbuild\settingSystemVars.bat
-        C:\TerRaSysBuild\winbuild\run_qmake_sln.py
-        C:\TerRaSysBuild\winbuild\run_qmake_proj.py
-        C:\TerRaSysBuild\winbuild\config.ini
+        git clone https://github.com/JulesDoc/python_scripts.git
 
+        At this stage you will have the following files hierarchy:
 
-    3. Edit the file settingSystemVars.bat to QMAKESPEC and PATH, save and execute. The rest of the configuration is
-    within the config.ini file.
+            C:\TerRaSysBuild\settingSystemVars.bat
 
+            C:\TerRaSysBuild\winbuild\run_qmake_sln.py
+            C:\TerRaSysBuild\winbuild\run_qmake_proj.py
+            C:\TerRaSysBuild\winbuild\config.ini
+            C:\TerRaSysBuild\winbuild\README.TXT
+
+            C:\TerRaSysBuild\continuous_build_integration\config.ini
+            C:\TerRaSysBuild\continuous_build_integration\copy_3rd_party.py
+            C:\TerRaSysBuild\continuous_build_integration\copy_headers_to_m_drive.py
+            C:\TerRaSysBuild\continuous_build_integration\qt_deploy.py
+            C:\TerRaSysBuild\continuous_build_integration\quick_build.py
+            C:\TerRaSysBuild\continuous_build_integration\utils_module.py
+
+    3. Open for editing the file settingSystemVars.bat and modify QMAKESPEC and PATH, save and execute.
 
 
 # How to use the scripts
@@ -67,10 +76,10 @@ Every variable used along these scripts must be defined through the config.ini f
 configuration language which provides a structure similar to what’s found in Microsoft Windows INI files by means of the
 Python Configuration file Parser.
 
-First thing to do is to execute "settingSystemVars.bat" (as mentioned before) to set the PATH and QMAKESPEC system
-variables. This is the only one batch file remaining from the old configuration. Setting an environment variable
-through a system call inside a Python script, sets the variable ONLY for the current process, thus, the best solution is
-to keep this .bat file.
+First thing to do is to execute "settingSystemVars.bat" inside winbuild folder(as mentioned before) to set the PATH
+and QMAKESPEC system variables. This is the only one batch file remaining from the old configuration.
+Setting an environment variable through a system call inside a Python script, sets the variable ONLY for the current
+process, thus, the best solution is to keep this .bat file.
 
 Second, as mentioned before, the user needs to configure all necessary variables in the config.ini file.
 There is no need to modify any python source code. Python scripts will read and parse the info written in the
@@ -86,7 +95,7 @@ NOTE on config.ini: There are two files config.ini, one in WINBUILD folder, one 
 
 ***DO NOT COMMIT INI FILES***
 
-- DEPLOY SOURCE CODE INTO DEVL MACHINE
+- DEPLOY SOURCE CODE INTO DEVL MACHINE. WINBUILD FOLDER.
 
     Following scripts are locate within winbuild folder. Config.ini existing in this folder file will take care of the
     path consistency for the next scripts:
@@ -95,7 +104,7 @@ NOTE on config.ini: There are two files config.ini, one in WINBUILD folder, one 
 	
 	- run_qmake_proj.py: To add a project to the terrasys solution or modify a project passed as parameter.
 
-- BUILD AND INTEGRATE DEVL CODE INTO PRODUCTION:
+- BUILD AND INTEGRATE DEVL CODE INTO PRODUCTION. CONTINUOUS_BUILD_INTEGRATION FOLDER.
 
     Following scripts are located within continuous_build_integration folder.
     Config.ini file existing in this will take care of the path consistency for the next scripts:
