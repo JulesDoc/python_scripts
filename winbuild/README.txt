@@ -1,7 +1,7 @@
 # Purpose of these python scripts
 
 These files are called to substitute batch files used to deploy TerRaSys source code on developer machine.
-And also are meant to be used to facilitate the integration of the developer code into production.
+Also, they are meant to be used to facilitate the integration of the developer code into production.
 Python scripts implements the same functionality as batch files but using 3.7 Python programming language.
 
 # System requirements
@@ -56,7 +56,7 @@ Python scripts implements the same functionality as batch files but using 3.7 Py
         C:\TerRaSysBuild\winbuild\config.ini
 
 
-    3. Edit the file settingSystemVars.bat to QMAKESPEC and PATH. That is all. Save. The rest of the configuration is
+    3. Edit the file settingSystemVars.bat to QMAKESPEC and PATH, save and execute. The rest of the configuration is
     within the config.ini file.
 
 
@@ -67,9 +67,10 @@ Every variable used along these scripts must be defined through the config.ini f
 configuration language which provides a structure similar to what’s found in Microsoft Windows INI files by means of the
 Python Configuration file Parser.
 
-First thing to do is to execute "settingSystemVars.bat" to set the PATH and QMAKESPEC system variables. This is the only
-one batch file remaining because setting an environment variable through a system calls inside a Python script sets it
-only for the current process and any child processes it launches, thus, the best solution is to keep this .bat file.
+First thing to do is to execute "settingSystemVars.bat" (as mentioned before) to set the PATH and QMAKESPEC system
+variables. This is the only one batch file remaining from the old configuration. Setting an environment variable
+through a system call inside a Python script, sets the variable ONLY for the current process, thus, the best solution is
+to keep this .bat file.
 
 Second, as mentioned before, the user needs to configure all necessary variables in the config.ini file.
 There is no need to modify any python source code. Python scripts will read and parse the info written in the
@@ -81,29 +82,30 @@ manage and it does not need more explanations.
 
 ****IMPORTANT: Password must be written in the config.ini file to be used ONLY LOCALLY. NEVER CHECK-IN config.file
 
-NOTE on config.ini: There are two files config.ini, one in WINBUILD, one in CONTINUOUS_BUILD_INTEGRATION. Both must be
-configured depending on functionality chosen.
+NOTE on config.ini: There are two files config.ini, one in WINBUILD folder, one in CONTINUOUS_BUILD_INTEGRATION folder.
 
 ***DO NOT COMMIT INI FILES***
 
-- DEPLOY SOURCE CODE INTO DEVL MACHINE: Depending on the necessities of the user:
+- DEPLOY SOURCE CODE INTO DEVL MACHINE
+
+    Following scripts are locate within winbuild folder. Config.ini existing in this folder file will take care of the
+    path consistency for the next scripts:
 
 	- run_qmake_sln.py: To create or recreate terrasys.sln with all projects specified in terrasys.pro.
 	
-	- run_qmake_proj.py: To add a project to the terrasys solution or modify a project passed as parameter. If the goal
-	is to modify the project, it is better to close it. Otherwise, Windows will complain of the external use of the file.
+	- run_qmake_proj.py: To add a project to the terrasys solution or modify a project passed as parameter.
 
 - BUILD AND INTEGRATE DEVL CODE INTO PRODUCTION:
 
-    Following scripts are locate within continuous_build_integration folder. Download them. They can be launched from
-    any location in the system, config.ini file will take care of the path consistency.
+    Following scripts are located within continuous_build_integration folder.
+    Config.ini file existing in this will take care of the path consistency for the next scripts:
 
     - copy_3rd_party.py: The 3rd party tools should be located in the folder c:\terrasys_3rdparty in the build machine.
     3rd party libraries are used to properly create and execute the projects. This scripts copies every lib or dll
     file into lib_release || lib_debug of the TerRaSysBuild.
     Some of the 3rd_party libs must be configure by the developer: OSGeo4W and prop_mdl_dll_idwm.*. They should be
-    present in c:\terrasys_3rd_party when the user execute this script.
-    This script can be executed in standalone way or can automatically called through quick_build.py when working in
+    present in c:\terrasys_3rdparty when the user execute this script.
+    This script can be executed in standalone way or can automatically be called through quick_build.py when working in
     DEBUG or RELEASE mode.
 
     - copy_headers_to_m_drive.py: When a proper build has been executed, this script copies header files into the M
@@ -119,21 +121,20 @@ configured depending on functionality chosen.
 
     - quick_build.py. Calling this script means mainly build the whole system. It will first copy 3rd party libraries
     and then, it will call DEVENV command to build all VS projects involved. Then, if the build finishes succesfully,
-    it will copy libs and headers into M folder. It will also send a mail to the user. In case of successful buidling,
+    it will copy libs and headers into M folder. It will also send a mail to the user. In case of successful building,
     the mail will be empty warning that everything went well, in case the build fails, mail will display the name of
-    the projects that failed and it will send also, as attached file (outfile.txt), all the output resulting from the
-    build, in order to check more precisely where the errors come from.
+    the projects that failed and it will send also, as attached file (outfile.txt) with all the output resulting from the
+    build in order to check more precisely, if desired by the user,  where the errors come from.
 
 
 
 # Advantages of the new approach are:
     - Global location of the configuration variables. All are found in the config.ini file.
     - No need to touch source code.
-    - Python is a portable language that could be executed in different platforms, however it is important to bear
-    in mind that the scripts may execute system calls only valid under Windows environment (depending on the shell,
-    this can be easily modified).
-    - Debug or release build is set only once in the config.ini file, then all the scripts will take into account this
-    and execute the proper methods.
+    - Python is a portable language that could be executed in different platforms, however, it is important to bear
+    in mind that the scripts executes Windows system calls (depending on the shell, this can be easily modified).
+    - Debug or release build is set only once in the config.ini file, then, all the scripts will take into account this
+    configuration and execute the proper methods.
     - Reduced number of scripts
 
 # Recurrent solutions used over the code
@@ -148,7 +149,7 @@ configured depending on functionality chosen.
 
 	PyCharm 2018.3.5 (Professional Edition)
     Build #PY-183.5912.18, built on February 26, 2019
-    Licensed to Julio Calvo
+    Student License to Julio Calvo
     Subscription is active until January 17, 2020
     For educational use only.
     JRE: 1.8.0_152-release-1343-b28 x86
