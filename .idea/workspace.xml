@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d20da3c-c7e6-42c6-a893-1a6e57d2c02e" name="Default Changelist" comment="" />
+    <list default="true" id="7c170747-9d7a-489e-b10c-8e47b851a1e5" name="Default Changelist" comment="Minor comments">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python_scripts.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/continuous_build_integration/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/continuous_build_integration/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/continuous_build_integration/settingSystemVars.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winbuild/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/winbuild/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winbuild/settingSystemVars.bat" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,47 +19,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/python_scripts$quick_build_no_copy.coverage" NAME="quick_build_no_copy Coverage Results" MODIFIED="1551804100135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_scripts$compiler.coverage" NAME="compiler Coverage Results" MODIFIED="1551870569304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/winbuild" />
-    <SUITE FILE_PATH="coverage/python_scripts$run_qmake_proj.coverage" NAME="run_qmake_proj Coverage Results" MODIFIED="1552296529718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/winbuild" />
-    <SUITE FILE_PATH="coverage/python_scripts$copy_headers_to_m_drive.coverage" NAME="copy_headers_to_m_drive Coverage Results" MODIFIED="1551868068536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_scripts$run_qmake_sln.coverage" NAME="run_qmake_sln Coverage Results" MODIFIED="1552382514493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/winbuild" />
-    <SUITE FILE_PATH="coverage/python_scripts$copy_libs_to_m_drive_bat.coverage" NAME="copy_libs_to_m_drive.bat Coverage Results" MODIFIED="1552065327701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/continous_Build_Integration" />
-    <SUITE FILE_PATH="coverage/python_scripts$copy_headers_to_m_drive__1_.coverage" NAME="copy_headers_to_m_drive (1) Coverage Results" MODIFIED="1552291467018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/continous_Build_Integration" />
-    <SUITE FILE_PATH="coverage/python_scripts$settingUp.coverage" NAME="settingUp Coverage Results" MODIFIED="1551803946324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_scripts$qt_deploy.coverage" NAME="qt_deploy Coverage Results" MODIFIED="1552292005504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/continous_Build_Integration" />
-    <SUITE FILE_PATH="coverage/python_scripts$quick_build.coverage" NAME="quick_build Coverage Results" MODIFIED="1552294360686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/continous_Build_Integration" />
-    <SUITE FILE_PATH="coverage/python_scripts$mail.coverage" NAME="mail Coverage Results" MODIFIED="1552323744448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mail" />
-    <SUITE FILE_PATH="coverage/python_scripts$copy_3rd_party.coverage" NAME="copy_3rd_party Coverage Results" MODIFIED="1552386895829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/continous_Build_Integration" />
+    <SUITE FILE_PATH="coverage/python_scripts$quick_build__1_.coverage" NAME="quick_build (1) Coverage Results" MODIFIED="1552653003191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/continuous_build_integration" />
+    <SUITE FILE_PATH="coverage/python_scripts$copy_libs_to_m_drive.coverage" NAME="copy_libs_to_m_drive Coverage Results" MODIFIED="1552575960629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/continous_Build_Integration" />
+    <SUITE FILE_PATH="coverage/python_scripts$quick_build.coverage" NAME="quick_build Coverage Results" MODIFIED="1552639111057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/continous_Build_Integration" />
+    <SUITE FILE_PATH="coverage/python_scripts$copy_3rd_party.coverage" NAME="copy_3rd_party Coverage Results" MODIFIED="1552575421999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/continous_Build_Integration" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/winbuild/run_qmake_sln.py">
+        <entry file="file://$PROJECT_DIR$/continuous_build_integration/copy_3rd_party.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="104" selection-start-line="17" selection-start-column="104" selection-end-line="17" selection-end-column="104" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/continous_Build_Integration/mailmodule.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/continous_Build_Integration/copy_3rd_party.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="510">
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -58,10 +39,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/continous_Build_Integration/copy_headers_to_m_drive.py">
+        <entry file="file://$PROJECT_DIR$/continuous_build_integration/copy_headers_to_m_drive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="442">
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="34" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -70,10 +51,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/continous_Build_Integration/qt_deploy.py">
+        <entry file="file://$PROJECT_DIR$/continuous_build_integration/copy_libs_to_m_drive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="221">
+              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/continuous_build_integration/qt_deploy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -81,88 +74,57 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/continuous_build_integration/config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/continous_Build_Integration/quick_build.py">
+        <entry file="file://$PROJECT_DIR$/winbuild/README.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/continous_Build_Integration/config.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/continous_Build_Integration/copy_libs_to_m_drive.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="561">
+              <caret line="69" column="103" lean-forward="true" selection-start-line="69" selection-start-column="103" selection-end-line="69" selection-end-column="103" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rmdir</find>
-      <find>rmtree</find>
-      <find>remove</find>
-      <find>del</find>
+      <find>check</find>
+      <find>lib_debug</find>
+      <find>PATHS</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/copy_3rd_party.py" />
-        <option value="$PROJECT_DIR$/settingUp.py" />
-        <option value="$PROJECT_DIR$/quick_build_debug.py" />
-        <option value="$PROJECT_DIR$/quick_build_debug_no_copy.py" />
-        <option value="$PROJECT_DIR$/quick_debug.py" />
-        <option value="$PROJECT_DIR$/quick_build_no_copy.py" />
-        <option value="$PROJECT_DIR$/qt_deploy.py" />
-        <option value="$PROJECT_DIR$/copy_libs_to_m_drive.bat.py" />
-        <option value="$PROJECT_DIR$/copy_headers_to_m_drive.py" />
-        <option value="$PROJECT_DIR$/run_qmake_sln.py" />
-        <option value="$PROJECT_DIR$/winbuild/compilerNew.bat" />
-        <option value="$PROJECT_DIR$/winbuild/compiler.py" />
-        <option value="$PROJECT_DIR$/continous_Build_Integration/quick_build_no_copy.py" />
-        <option value="$PROJECT_DIR$/winbuild/settingSystemVars.bat" />
-        <option value="$PROJECT_DIR$/winbuild/README.txt" />
-        <option value="$PROJECT_DIR$/winbuild/config.ini" />
-        <option value="$PROJECT_DIR$/continous_Build_Integration/copy_libs_to_m_drive.bat.py" />
-        <option value="$PROJECT_DIR$/continous_Build_Integration/copy_headers_to_m_drive.py" />
-        <option value="$PROJECT_DIR$/winbuild/run_qmake_proj.py" />
-        <option value="$PROJECT_DIR$/config.ini" />
-        <option value="$PROJECT_DIR$/continous_Build_Integration/copy_3rd_party.py" />
-        <option value="$PROJECT_DIR$/mail/entrada.txt" />
-        <option value="$PROJECT_DIR$/mail/mail.py" />
-        <option value="$PROJECT_DIR$/winbuild/mailmodule.py" />
-        <option value="$PROJECT_DIR$/continous_Build_Integration/qt_deploy.py" />
-        <option value="$PROJECT_DIR$/continous_Build_Integration/mailmodule.py" />
-        <option value="$PROJECT_DIR$/continous_Build_Integration/config.ini" />
         <option value="$PROJECT_DIR$/winbuild/run_qmake_sln.py" />
+        <option value="$PROJECT_DIR$/continous_Build_Integration/mailmodule.py" />
+        <option value="$PROJECT_DIR$/continous_Build_Integration/copy_headers_to_m_drive.py" />
+        <option value="$PROJECT_DIR$/continous_Build_Integration/qt_deploy.py" />
+        <option value="$PROJECT_DIR$/continous_Build_Integration/config.ini" />
+        <option value="$PROJECT_DIR$/continous_Build_Integration/copy_libs_to_m_drive.py" />
+        <option value="$PROJECT_DIR$/continous_Build_Integration/copy_3rd_party.py" />
+        <option value="$PROJECT_DIR$/continous_Build_Integration/copy_3rd_party_OTHER.py" />
         <option value="$PROJECT_DIR$/continous_Build_Integration/quick_build.py" />
+        <option value="$PROJECT_DIR$/continous_Build_Integration/utils_module.py" />
+        <option value="$PROJECT_DIR$/continuous_build_integration/copy_3rd_party.py" />
+        <option value="$PROJECT_DIR$/continuous_build_integration/quick_build.py" />
+        <option value="$PROJECT_DIR$/winbuild/config.ini" />
+        <option value="$PROJECT_DIR$/continuous_build_integration/utils_module.py" />
+        <option value="$PROJECT_DIR$/continuous_build_integration/copy_libs_to_m_drive.py" />
+        <option value="$PROJECT_DIR$/winbuild/run_qmake_proj.py" />
+        <option value="$PROJECT_DIR$/continuous_build_integration/config.ini" />
+        <option value="$PROJECT_DIR$/winbuild/README.txt" />
       </list>
     </option>
   </component>
@@ -187,7 +149,7 @@
             <path>
               <item name="python_scripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="continous_Build_Integration" type="462c0819:PsiDirectoryNode" />
+              <item name="continuous_build_integration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="python_scripts" type="b2602c69:ProjectViewProjectNode" />
@@ -202,21 +164,15 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/winbuild/config.ini" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/winbuild/config.ini" />
+    <property name="settings.editor.selected.configurable" value="http.certificates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\TerRaSys_scripts\python_scripts\winbuild" />
       <recent name="C:\TerRaSys_scripts\python_scripts\continous_Build_Integration" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\TerRaSys_scripts\python_scripts\continous_Build_Integration" />
-      <recent name="C:\TerRaSys_scripts\python_scripts\winbuild" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -231,7 +187,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.copy_3rd_party">
+  <component name="RunManager" selected="Python.quick_build (1)">
     <configuration name="copy_3rd_party" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_scripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -254,7 +210,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mail" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="copy_libs_to_m_drive" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_scripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -262,12 +218,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mail" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/continous_Build_Integration" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\TerRaSys_scripts\python_scripts\continous_Build_Integration\mailmodule.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/continous_Build_Integration/copy_libs_to_m_drive.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="quick_build (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python_scripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/continuous_build_integration" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/continuous_build_integration/quick_build.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,64 +276,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_qmake_proj" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_scripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/winbuild" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/winbuild/run_qmake_proj.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="run_qmake_sln" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_scripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/winbuild" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/winbuild/run_qmake_sln.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.quick_build" />
-      <item itemvalue="Python.run_qmake_proj" />
-      <item itemvalue="Python.copy_3rd_party" />
-      <item itemvalue="Python.mail" />
-      <item itemvalue="Python.run_qmake_sln" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.copy_3rd_party" />
-        <item itemvalue="Python.run_qmake_sln" />
-        <item itemvalue="Python.mail" />
-        <item itemvalue="Python.run_qmake_proj" />
+        <item itemvalue="Python.quick_build (1)" />
         <item itemvalue="Python.quick_build" />
+        <item itemvalue="Python.copy_libs_to_m_drive" />
+        <item itemvalue="Python.copy_3rd_party" />
       </list>
     </recent_temporary>
   </component>
@@ -364,53 +290,57 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2d20da3c-c7e6-42c6-a893-1a6e57d2c02e" name="Default Changelist" comment="" />
-      <created>1551785351060</created>
+      <changelist id="7c170747-9d7a-489e-b10c-8e47b851a1e5" name="Default Changelist" comment="" />
+      <created>1552487717602</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1551785351060</updated>
-      <workItem from="1551785352295" duration="27370000" />
-      <workItem from="1551885770425" duration="8728000" />
-      <workItem from="1551978530546" duration="69497000" />
-      <workItem from="1552473701167" duration="587000" />
-      <workItem from="1552474797207" duration="106000" />
-      <workItem from="1552475275809" duration="1086000" />
+      <updated>1552487717602</updated>
+      <workItem from="1552487720064" duration="16901000" />
+      <workItem from="1552573745550" duration="20821000" />
+      <workItem from="1552643301135" duration="21000" />
+      <workItem from="1552651789013" duration="12260000" />
+      <workItem from="1553682088927" duration="1279000" />
+      <workItem from="1553690374220" duration="551000" />
+      <workItem from="1554105521038" duration="2000" />
+      <workItem from="1555063161145" duration="3000" />
+      <workItem from="1555486841322" duration="604000" />
+      <workItem from="1555514757068" duration="5455000" />
+      <workItem from="1556022264968" duration="651000" />
+      <workItem from="1556028634496" duration="2003000" />
+      <workItem from="1556039147376" duration="1214000" />
+      <workItem from="1556117306463" duration="23000" />
+      <workItem from="1556117357993" duration="95000" />
+      <workItem from="1556187645288" duration="4637000" />
+      <workItem from="1557125864103" duration="13969000" />
+      <workItem from="1558423099740" duration="1858000" />
+      <workItem from="1558681203591" duration="4798000" />
+      <workItem from="1559719880418" duration="834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107374000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="87979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12899786" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14392324" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49520257" weight="0.32981783" />
-      <window_info anchor="bottom" x="185" y="411" width="1550" height="338" id="Run" order="2" sideWeight="0.5506396" weight="0.31255993" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48294243" weight="0.36720997" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32981783" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.32981783" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.32694152" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32981783" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4989339" visible="true" weight="0.1620326" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.33582088" weight="0.3835091" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.50479746" side_tool="true" visible="true" weight="0.32981783" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" sideWeight="0.49946696" weight="0.32981783" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.1620326" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32981783" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3058485" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -421,229 +351,252 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Minor comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor comments" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/continous_Build_Integration/copy_3rd_party.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/continous_Build_Integration/copy_3rd_party.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="debuggerHistoryManager">
-    <expressions id="evaluateCodeFragment">
-      <expression>
-        <expression-string>config['PATHS']['terraSysDir'] + '\\' + sys.argv[1] + '\\' + sys.argv[1] + '.pro'
-                   + '\\' + sys.argv[1] + '\\' + sys.argv[1] + '.pro'</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>config['PATHS']['terraSysDir']
-                   + '\\' + sys.argv[1] + '\\' + sys.argv[1] + '.pro'</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-    </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>'del /f ' + destination + '\\' + config['PATHS']['idwmDllFile']</expression-string>
+        <expression-string>config['PATHS']['libReleaseDir']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>destination + '\\' + config['PATHS']['idwmLibFile']</expression-string>
+        <expression-string>os.path.isdir(config['PATHS']['libReleaseDir'])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>destination + '\\' + config['PATHS']['idwmDllFile']</expression-string>
+        <expression-string>f</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>os.path.isdir(config['PATHS']['libDebugDir'])</expression-string>
+        <expression-string>f.readlines()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>config['PATHS']['terraSysBuildDir']</expression-string>
+        <expression-string>os.path.join(destination, file)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>config['PATHS']['executablePath']</expression-string>
+        <expression-string>config['PATHS']['bcdLibFile']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>config['PATHS']['qtDeployDir']</expression-string>
+        <expression-string>config['PATHS']['osgeo4winclude']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>config['PATHS']['idwmFilesPath'] + '\\' + fileName</expression-string>
+        <expression-string>config['PATHS']['osgeo4wshare']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>config['PATHS']['terraSysDir']</expression-string>
+        <expression-string>config['PATHS']['osgeo4wlib']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib_debug" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/configparser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="1251" selection-start-line="1251" selection-end-line="1251" />
+        <state relative-caret-position="200">
+          <caret line="408" selection-start-line="408" selection-end-line="408" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settingUp.py" />
-    <entry file="file://$PROJECT_DIR$/winbuild/compilerNew.bat" />
-    <entry file="file://$PROJECT_DIR$/compiler.bat" />
-    <entry file="file://$PROJECT_DIR$/winbuild/compiler.py" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/pycharm64.exe.vmoptions">
+    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/copy_3rd_party_OTHER.py" />
+    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/build_results.txt" />
+    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/outfile.txt" />
+    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/quick_build.py" />
+    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/config.ini" />
+    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/copy_3rd_party.py" />
+    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/copy_headers_to_m_drive.py" />
+    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/copy_libs_to_m_drive.py" />
+    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/qt_deploy.py" />
+    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/settingSystemVars.bat" />
+    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/utils_module.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="616">
+          <caret line="332" selection-start-line="332" selection-end-line="332" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/winbuild/settingSystemVars.bat">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/subprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state relative-caret-position="286">
+          <caret line="487" selection-start-line="487" selection-end-line="487" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/settingSystemVars.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/winbuild/config.ini">
+    <entry file="file://$PROJECT_DIR$/continuous_build_integration/outfile.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
+        <state relative-caret-position="-69598" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/winbuild/README.txt">
+    <entry file="file://$USER_HOME$/Desktop/test.py" />
+    <entry file="file://$PROJECT_DIR$/continuous_build_integration/quick_build.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        <state relative-caret-position="663">
+          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/winbuild/run_qmake_proj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        <state relative-caret-position="799">
+          <caret line="47" column="22" lean-forward="true" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="451" selection-start-line="451" selection-end-line="451" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="320" selection-start-line="320" selection-end-line="320" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/salida.txt" />
-    <entry file="file://$PROJECT_DIR$/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/winbuild/entrada.txt" />
-    <entry file="file://$PROJECT_DIR$/winbuild/out" />
-    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/entrada.txt" />
-    <entry file="file://$PROJECT_DIR$/winbuild/salida.txt" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/shutil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/winbuild/outfile" />
-    <entry file="file://$PROJECT_DIR$/winbuild/mailmodule.py" />
     <entry file="file://$PROJECT_DIR$/winbuild/run_qmake_sln.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="104" selection-start-line="17" selection-start-column="104" selection-end-line="17" selection-end-column="104" />
+        <state relative-caret-position="306">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/mailmodule.py">
+    <entry file="file://$PROJECT_DIR$/continuous_build_integration/utils_module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="255">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/copy_3rd_party.py">
+    <entry file="file://$PROJECT_DIR$/winbuild/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/continuous_build_integration/copy_3rd_party.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/copy_headers_to_m_drive.py">
+    <entry file="file://$PROJECT_DIR$/continuous_build_integration/copy_headers_to_m_drive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="442">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="34" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/qt_deploy.py">
+    <entry file="file://$PROJECT_DIR$/continuous_build_integration/copy_libs_to_m_drive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="221">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/continuous_build_integration/qt_deploy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/config.ini">
+    <entry file="file://$PROJECT_DIR$/continuous_build_integration/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        <state relative-caret-position="-17">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/copy_libs_to_m_drive.py">
+    <entry file="file://$PROJECT_DIR$/winbuild/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/continous_Build_Integration/quick_build.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="561">
+          <caret line="69" column="103" lean-forward="true" selection-start-line="69" selection-start-column="103" selection-end-line="69" selection-end-column="103" />
         </state>
       </provider>
     </entry>
