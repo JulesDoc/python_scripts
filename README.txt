@@ -1,8 +1,8 @@
 # Purpose of these python scripts
 
-These files are called to substitute batch files used to deploy TerRaSys source code on developer machine.
-Also, they are meant to be used to facilitate the integration of the developer code into production.
-Python scripts implements the same functionality as batch files but using 3.7 Python programming language.
+    These files are called to substitute batch files used to deploy TerRaSys source code on developer machine.
+    Also, they are meant to be used to facilitate the integration of the developer code into production.
+    Python scripts implements the same functionality as batch files but using 3.7 Python programming language.
 
 # System requirements
 
@@ -16,11 +16,13 @@ Python scripts implements the same functionality as batch files but using 3.7 Py
 
     1. Create a folder in your local machine for the source code. Example: C:\TerRaSysOnTFS
         Note: in this document TERRASYS_DIR refers to the folder where TerRaSys source code is located
+
     2. Get the latest version from TFS of the files:
         a. TerRaSysOnTFS/dependencies.pro
         b. TerRaSysOnTFS/terrasys.pri
         c. TerRaSysOnTFS/terrasys.pro
         Note: These files contain the configuration existing in the build machine.
+
     3. Get the latest version of the projects you need to work on. Example: TerRaTronLib
 
     At this stage you will have the following files hierarchy:
@@ -53,47 +55,44 @@ Python scripts implements the same functionality as batch files but using 3.7 Py
 
         At this stage you will have the following files hierarchy:
 
+            C:\TerRaSysBuild\README.TXT
             C:\TerRaSysBuild\settingSystemVars.bat
 
+            C:\TerRaSysBuild\winbuild\config.ini
             C:\TerRaSysBuild\winbuild\run_qmake_sln.py
             C:\TerRaSysBuild\winbuild\run_qmake_proj.py
-            C:\TerRaSysBuild\winbuild\config.ini
-            C:\TerRaSysBuild\winbuild\README.TXT
 
             C:\TerRaSysBuild\continuous_build_integration\config.ini
             C:\TerRaSysBuild\continuous_build_integration\copy_3rd_party.py
             C:\TerRaSysBuild\continuous_build_integration\copy_headers_to_m_drive.py
+            C:\TerRaSysBuild\continuous_build_integration\copy_libs_to_m_drive.py
             C:\TerRaSysBuild\continuous_build_integration\qt_deploy.py
             C:\TerRaSysBuild\continuous_build_integration\quick_build.py
             C:\TerRaSysBuild\continuous_build_integration\utils_module.py
 
-    3. Open for editing the file settingSystemVars.bat and modify QMAKESPEC and PATH, save and execute.
+    3. Open for editing the file settingSystemVars.bat and modify QMAKESPEC and PATH depending on your
+    system settings, save and execute.
 
 
 # How to use the scripts
 
-Every variable used along these scripts must be defined through the config.ini file. This file implements a basic
-configuration language which provides a structure similar to what’s found in Microsoft Windows INI files by means of the
-Python Configuration file Parser.
 
-First thing to do is to execute "settingSystemVars.bat" inside winbuild folder(as mentioned before) to set the PATH
-and QMAKESPEC system variables. This is the only one batch file remaining from the old configuration.
-Setting an environment variable through a system call inside a Python script, sets the variable ONLY for the current
-process, thus, the best solution is to keep this .bat file.
+    Every variable used along these scripts must be defined through the config.ini file. This file implements a basic
+    configuration language which provides a structure similar to what’s found in Microsoft Windows INI files by means of
+    the Python Configuration file Parser.
 
-Second, as mentioned before, the user needs to configure all necessary variables in the config.ini file.
-There is no need to modify any python source code. Python scripts will read and parse the info written in the
-config.ini file. To comment a line use '#' + space.
+    First thing to do is to execute "settingSystemVars.bat" inside winbuild folder(as mentioned before) to set the PATH
+    and QMAKESPEC system variables. This is the only one batch file remaining from the old configuration.
+    Setting an environment variable through a system call inside a Python script, sets the variable ONLY for the current
+    process, thus, the best solution is to keep this .bat file.
 
-Within the config.ini file, the user can choose between DEBUG or RELEASE build and can also ask to copy libraries and
-headers to M drive after the build, those variables are in the DEFAULT part of the file. Config.ini file is very easy to
-manage and it does not need more explanations.
+    Second, as mentioned before, the user needs to configure all necessary variables in the config.ini file.
+    There is no need to modify any python source code. Python scripts will read and parse the info written in the
+    config.ini file. To comment a line use '#' + space.
+    NOTE on config.ini: There are two files config.ini, one in WINBUILD folder, one in CONTINUOUS_BUILD_INTEGRATION.
 
-****IMPORTANT: Password must be written in the config.ini file to be used ONLY LOCALLY. NEVER CHECK-IN config.file
-
-NOTE on config.ini: There are two files config.ini, one in WINBUILD folder, one in CONTINUOUS_BUILD_INTEGRATION folder.
-
-***DO NOT COMMIT INI FILES***
+****IMPORTANT: Password must be written in the config.ini file to be used ONLY LOCALLY. NEVER CHECK-IN config.ini files
+***DO NOT COMMIT CONFIG.INI FILES***
 
 - DEPLOY SOURCE CODE INTO DEVL MACHINE. WINBUILD FOLDER.
 
@@ -106,7 +105,9 @@ NOTE on config.ini: There are two files config.ini, one in WINBUILD folder, one 
 
 - BUILD AND INTEGRATE DEVL CODE INTO PRODUCTION. CONTINUOUS_BUILD_INTEGRATION FOLDER.
 
-    Following scripts are located within continuous_build_integration folder.
+    Following scripts are located within continuous_build_integration folder. Within the config.ini file located in this
+    folder, the user can choose between DEBUG or RELEASE build and can also ask to copy libraries and headers to M drive
+    after the build.
     Config.ini file existing in this will take care of the path consistency for the next scripts:
 
     - copy_3rd_party.py: The 3rd party tools should be located in the folder c:\terrasys_3rdparty in the build machine.
@@ -137,7 +138,8 @@ NOTE on config.ini: There are two files config.ini, one in WINBUILD folder, one 
 
 
 
-# Advantages of the new approach are:
+# Advantages of the new approach
+
     - Global location of the configuration variables. All are found in the config.ini file.
     - No need to touch source code.
     - Python is a portable language that could be executed in different platforms, however, it is important to bear

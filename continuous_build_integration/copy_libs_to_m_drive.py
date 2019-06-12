@@ -1,7 +1,5 @@
 import os
 import configparser
-import subprocess
-from shutil import rmtree, copytree
 from utils_module import recursive_overwrite
 from time import sleep
 
@@ -31,18 +29,6 @@ elif config['DEFAULT']['debugOrRelease'] == 'release':
     source = config['PATHS']['terraSysBuildDir'] + '\\' + 'lib_release'  # config['PATHS']['libReleaseDir']
 else:
     print('Wrong parameters in config.ini...quit')
-
-# and copying libs
-# if os.path.isdir(destination):
-    # try:
-    #    rmtree(destination)
-    # except IOError:
-    #    print("Problem removing include folder. Removing header folder manually")
-    # try:
-    #    subprocess.run('rd /S /Q ' + destination, shell=True, check=True)
-    # except subprocess.CalledProcessError as e:
-    #    print(e.output)
-    #    quit()
 try:
     recursive_overwrite(source, destination)
     # copytree(source, destination)
