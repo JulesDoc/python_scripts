@@ -86,10 +86,14 @@ def send_mail(error):
         server.login(gmail_user, gmail_app_password)
         server.sendmail(sent_from, sent_to, email_text)
         server.close()
-
-        print('Email sent!')
     except Exception as exception:
         print("Error: %s!\n\n" % exception)
+
+    if error:
+        print('Errors found in the build, please check email')
+        print('Email sent!')
+    else:
+        print('Email sent!')
 
 
 def attached(error, lista_folders):
@@ -138,7 +142,11 @@ def attached(error, lista_folders):
         server.login(sender, gmail_password)
         server.sendmail(sender, recipients, composed)
         server.close()
-        print("Email sent!")
+        if error:
+            print('Errors found in the build, please check email')
+            print('Email sent!')
+        else:
+            print('Email sent!')
     except Exception as exception:
         print("Error: %s!\n\n" % exception)
         raise

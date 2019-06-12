@@ -19,7 +19,10 @@ try:
 except subprocess.CalledProcessError as e:
     print(e.output)
     quit()
-
+if not (os.path.isfile(config['PATHS']['terraSysBuildDir'] + '\\' + 'terrasys.sln')):
+    print('')
+    print("No solution file found!...quit")
+    exit()
 # Setting up files system folders and executing devenv. Debug || Release
 # System calls are done by means of subprocess module
 try:
