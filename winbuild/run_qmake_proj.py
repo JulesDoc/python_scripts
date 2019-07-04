@@ -39,7 +39,7 @@ if os.path.isfile(proFileName):
                 quit()
         try:
             os.mkdir(destination)
-        except subprocess.CalledProcessError as e:
+        except IOError:
             print("Creating folder manually")
             try:
                 subprocess.run('mkdir ' + destination, shell=True, check=True)
