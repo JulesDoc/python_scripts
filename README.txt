@@ -130,7 +130,7 @@
     a given Qt project to be able to run independently.
 
     - quick_build.py. Calling this script means mainly build the whole system. It will first copy 3rd party libraries
-    and then, it will call DEVENV command to build all VS projects involved. Then, if the build finishes succesfully,
+    and then, it will call DEVENV command to build all VS projects involved. Then, if the build finishes successfully,
     it will copy libs and headers into M folder. It will also send a mail to the user. In case of successful building,
     the mail will be empty warning that everything went well, in case the build fails, mail will display the name of
     the projects that failed and it will send also, as attached file (outfile.txt) with all the output resulting from the
